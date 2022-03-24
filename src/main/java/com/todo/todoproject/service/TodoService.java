@@ -36,7 +36,7 @@ public class TodoService {
 
 
     public List<TodoItemFromUser> getAll() {
-        List<TodoItemSql> todoItemsNoSql = itemNoSqlRepository.findAll();
+        List<TodoItemNoSql> todoItemsNoSql = itemNoSqlRepository.findAll();
         return todoItemsNoSql
                 .stream()
                 .map(item -> new TodoItemFromUser(item.getUuid(), item.getUsername(), item.getPassword()))
