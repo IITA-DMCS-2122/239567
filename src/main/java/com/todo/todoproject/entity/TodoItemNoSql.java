@@ -1,22 +1,24 @@
 package com.todo.todoproject.entity;
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.Id;
 
-import javax.persistence.*;
 
+@Document(collection = "todo_items")
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "user")
-public class TodoEntity {
+public class TodoItemNoSql {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
-    @Column(name = "username", unique = true)
+    private String uuid;
     private String username;
     private String password;
 }
