@@ -1,4 +1,4 @@
-package com.bp.todoitems.todoproject;
+package com.bp.todoitems.todoproject.Entity.Sql;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

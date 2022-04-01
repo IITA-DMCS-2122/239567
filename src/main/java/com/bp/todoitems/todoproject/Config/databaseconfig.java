@@ -1,5 +1,6 @@
-package com.bp.todoitems.todoproject;
+package com.bp.todoitems.todoproject.Config;
 
+import com.bp.todoitems.todoproject.Entity.Sql.TodoSqlEntity;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;

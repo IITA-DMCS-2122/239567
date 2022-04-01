@@ -1,12 +1,13 @@
-package com.bp.todoitems.todoproject;
+package com.bp.todoitems.todoproject.Service;
 
+import com.bp.todoitems.todoproject.Entity.Sql.TodoSqlEntity;
+import com.bp.todoitems.todoproject.Repository.TodoMongoRepository;
+import com.bp.todoitems.todoproject.Repository.TodoSqlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Service
 public class TodoItemsService {
@@ -14,7 +15,8 @@ public class TodoItemsService {
     @Autowired
     private TodoSqlRepository todoSqlRepository;
 
-    //add
+
+        //add
     public void add(TodoSqlEntity todoSqlEntity) {
         todoSqlEntity.setUuid(UUID.randomUUID().toString());
         TodoSqlEntity todoItemSql = TodoSqlEntity
@@ -24,6 +26,7 @@ public class TodoItemsService {
                 .title(todoSqlEntity.getTitle())
                 .build();
         todoSqlRepository.save(todoItemSql);
+
     }
     //find
    public List<TodoSqlEntity> get(){

@@ -1,10 +1,9 @@
-package com.bp.todoitems.todoproject;
+package com.bp.todoitems.todoproject.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.bp.todoitems.todoproject.TodoSqlEntity;
+import com.bp.todoitems.todoproject.Entity.Sql.TodoSqlEntity;
 
 import javax.transaction.Transactional;
-import java.util.UUID;
 
 @Transactional
 public interface TodoSqlRepository extends JpaRepository<TodoSqlEntity, Integer> {
