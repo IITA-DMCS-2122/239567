@@ -16,12 +16,11 @@ import java.util.UUID;
 @Setter
 @Builder
 @AllArgsConstructor
-@Document(collation = "todo_itmes")
+@Document("todo_itmes")
 public class TodoNoSqlMongo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private long id;
 
     private String uuid;
     private String username;
@@ -30,6 +29,7 @@ public class TodoNoSqlMongo {
     public TodoNoSqlMongo(){
         uuid = UUID.randomUUID().toString();
     }
+
 
 
 

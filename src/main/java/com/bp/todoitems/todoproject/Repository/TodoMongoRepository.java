@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface TodoMongoRepository extends MongoRepository<TodoNoSqlMongo, Integer> {
+public interface TodoMongoRepository extends MongoRepository<TodoNoSqlMongo, Long> {
     void deleteById(Integer id);
 
 

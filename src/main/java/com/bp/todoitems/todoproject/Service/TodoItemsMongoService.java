@@ -25,6 +25,7 @@ public class TodoItemsMongoService {
         todoNoSqlMongo.setUuid(UUID.randomUUID().toString());
         TodoNoSqlMongo todoItemNoSql = TodoNoSqlMongo
                 .builder()
+                .id(todoNoSqlMongo.getId())
                 .uuid(todoNoSqlMongo.getUuid())
                 .username(todoNoSqlMongo.getUsername())
                 .title(todoNoSqlMongo.getTitle())

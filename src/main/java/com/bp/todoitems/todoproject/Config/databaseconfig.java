@@ -40,7 +40,7 @@ public class databaseconfig {
         properties.put("hibernate.hbm2ddl.auto", "update");
         return builder.dataSource(postgresDataSource()).packages(TodoSqlEntity.class.getPackage().getName()).properties(properties).build();
     }
-
+    @Primary
     @Bean("TransactionManager")
     public PlatformTransactionManager TransactionManager(
             final @Qualifier("EntityManagerFactory") LocalContainerEntityManagerFactoryBean memberEntityManagerFactory) {

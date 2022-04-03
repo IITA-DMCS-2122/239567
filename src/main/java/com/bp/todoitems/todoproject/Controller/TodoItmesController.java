@@ -42,7 +42,7 @@ public class TodoItmesController {
     @GetMapping("/getmongo")
     public List<TodoNoSqlMongo> getAllmongo(){return todoItemsMongoService.getmongo();}
 
-    @DeleteMapping("/deletemonogo")
+    @DeleteMapping("/deletemonogo/{id}")
     public void deletemongo(@PathVariable Integer id) { todoItemsMongoService.deletemongo(id);}
 
     @PutMapping("/updatemongo")
