@@ -2,9 +2,7 @@ package com.bp.todoitems.todoproject.Service;
 
 
 import com.bp.todoitems.todoproject.Entity.NoSql.TodoNoSqlMongo;
-import com.bp.todoitems.todoproject.Entity.Sql.TodoSqlEntity;
 import com.bp.todoitems.todoproject.Repository.TodoMongoRepository;
-import com.bp.todoitems.todoproject.Repository.TodoSqlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

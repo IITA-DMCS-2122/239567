@@ -2,6 +2,7 @@ package com.bp.todoitems.todoproject.Controller;
 
 import com.bp.todoitems.todoproject.Entity.NoSql.TodoNoSqlMongo;
 import com.bp.todoitems.todoproject.Entity.Sql.TodoSqlEntity;
+import com.bp.todoitems.todoproject.Entity.SqlAnalytics.TodoSqlAnalyticsEntity;
 import com.bp.todoitems.todoproject.Service.TodoItemsMongoService;
 import com.bp.todoitems.todoproject.Service.TodoItemsService;
 import lombok.AllArgsConstructor;
@@ -27,8 +28,8 @@ public class TodoItmesController {
     }
 
     @PostMapping("/add")
-    public void add(@RequestBody TodoSqlEntity todoSqlEntity){
-        todoItemsService.add(todoSqlEntity);
+    public void add(@RequestBody TodoSqlEntity todoSqlEntity, TodoSqlAnalyticsEntity todoSqlAnalyticsEntity){
+        todoItemsService.add(todoSqlEntity, todoSqlAnalyticsEntity);
     }
 
     @PutMapping("/update")
